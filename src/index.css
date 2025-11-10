@@ -38,7 +38,7 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter Tight';
   overflow-x: hidden;
   position: relative;
   transition: var(--transition);
