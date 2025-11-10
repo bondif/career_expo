@@ -91,19 +91,19 @@ export default function Home({ onAdminLogin }) {
     { 
       name: "Fatine Elharouni", 
       title: "Docteure, Maîtresse Assistante en Gestion de Projet et en Gestion de la Chaîne d'Approvisionnement à l'École Nationale des Sciences Appliquées de Marrakech", 
-      photo: "../public/jury/Jury1.jpeg",
+      photo: "/Jury/Jury1.jpeg",
       linkedin: "https://www.linkedin.com/in/fatine-elharouni-5a727821/"
     },
     { 
       name: "Abdellah Tajer", 
       title: "Professeur assistant à l'École nationale des Sciences Appliquées de Marrakech", 
-      photo: "./public/jury/Jury2.jpeg",
+      photo: "Jury/Jury2.jpeg",
       linkedin: "https://www.linkedin.com/in/abdellah-tajer-744047155/"
     },
     { 
       name: "Aissam Bekkari", 
       title: "Enseignant chercheur à l'École Nationale des Sciences Appliquées de Marrakech", 
-      photo: "./public/jury/Jury3.jpeg",
+      photo: "/Jury/Jury3.jpeg",
       linkedin: "https://www.linkedin.com/in/aissam-bekkari-979102177/"
     }
   ];
