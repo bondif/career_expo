@@ -41,33 +41,44 @@ export default function Home({ onAdminLogin }) {
   };
 
   const partners = [
-    { name: "Capgemini", logo: "/Logos/Capgemini.png", website: "https://www.capgemini.com/" },
+    { name: "Université Cadi Ayyad", logo: "/Logos/uca.png", website: "https://www.uca.ma/" },
+    { name: "ENSA Marrakech", logo: "/Logos/ensa.png", website: "http://www.ensa.ac.ma/" },
+    { name: "Capgemini", logo: "/Logos/capgemini.png", website: "https://www.capgemini.com/" },
     { name: "Retain", logo: "/Logos/retain.png", website: "https://www.retain.com/" },
-    { name: "Bank of Africa", logo: "/Logos/BankofAfrica.png", website: "https://www.bankofafrica.ma/" },
+    { name: "Bank of Africa", logo: "/Logos/BankOfAfrica.png", website: "https://www.bankofafrica.ma/" },
     { name: "Istya Group", logo: "/Logos/istya.png", website: "https://www.istya.com/" },
     { name: "Oriliss Consulting", logo: "/Logos/OrilissConsulting.png", website: "https://www.orilisconsulting.ma/" },
     { name: "Green Energy Park", logo: "/Logos/greenenergypark.png", website: "https://www.greenenergypark.ma/" },
     { name: "Leyton", logo: "/Logos/Leyton.png", website: "https://www.leyton.com/" },
-    { name: "Lear", logo: "/Logos/lear.png", website: "https://www.lear.com/" },
-    { name: "Université Cadi Ayyad", logo: "/Logos/uca.png", website: "https://www.uca.ma/" },
-    { name: "ENSA Marrakech", logo: "/Logos/ensa.png", website: "http://www.ensa.ac.ma/" }
+    { name: "Lear", logo: "/Logos/lear.png", website: "https://www.lear.com/" }
   ];
 
   const [activeDay, setActiveDay] = useState(1);
 
   const scheduleDay1 = [
     { time: "8:30 – 9:00", event: "Accueil & Check-in des participants" },
-    { time: "9:00 – 9:45", event: "Mot de Monsieur le Président de l'UCA & Mot de Monsieur le Directeur de l'ENSAM", speaker: "Professeur Belaid BOUGADIR & Professeur Hassan AYAD", location: "amphithéâtre" },
-    { time: "9:45 – 10:00", event: "Présentation de l'Office Marocain de la Propriété Industrielle et Commerciale - OMPIC", location: "amphithéâtre" },
-    { time: "10:00 – 11:00", event: "Conférence internationale : L'alternance et la Recherche Appliquée: De nouveau horizons pour les écoles d'ingénieurs", speaker: "REKLAOUI KAMAL & ALEXIS TODOSKOFF", location: "amphithéâtre" },
-    { time: "11:15 – 12:15", event: "PANEL 1: IA et transformation du salariat: révolution ou évolution ?", location: "amphithéâtre" },
-    { time: "12:15 – 13:15", event: "PANEL 2: Innover, entreprendre, évoluer: l'impact de l'IA sur les leaders de demain", location: "amphithéâtre" },
+      {
+    time: "9:00 – 9:20",
+    event: "Mot de Monsieur le Président de l'UCA",
+    speaker: "Professeur Blaïd BOUGADIR",
+    location: "Amphithéâtre"
+  },
+  {
+    time: "9:20 – 9:45",
+    event: "Mot de Monsieur le Directeur de l'ENSA-M",
+    speaker: "Professeur Hassan AYAD",
+    location: "Amphithéâtre"
+  },
+    { time: "9:45 – 10:00", event: "Présentation de l'Office Marocain de la Propriété Industrielle et Commerciale - OMPIC", location: "Amphithéâtre" },
+    { time: "10:00 – 11:00", event: "Conférence : L'alternance et la Recherche Appliquée: De nouveau horizons pour les écoles d'ingénieurs", speaker: "REKLAOUI KAMAL & ALEXIS TODOSKOFF", location: "Amphithéâtre" },
+    { time: "11:15 – 12:15", event: "PANEL 1: IA et transformation du salariat: révolution ou évolution ?", location: "Amphithéâtre" },
+    { time: "12:15 – 13:15", event: "PANEL 2: Innover, entreprendre, évoluer: l'impact de l'IA sur les leaders de demain", location: "Amphithéâtre" },
     { time: "13:15 – 18:00", event: "Sessions de recrutement et entretiens individuels avec les entreprises partenaires", location: "salles / stands dédiés" }
   ];
 
   const scheduleDay2 = [
-    { time: "9:00 – 11:30", event: "Compétition des CVS", location: "amphithéâtre" },
-    { time: "9:00 – 11:30", event: "Tables rondes", location: "amphithéâtre" }
+    { time: "9:00 – 11:30", event: "Compétition des CVS", location: "Amphithéâtre" },
+    { time: "9:00 – 11:30", event: "Tables rondes", location: "Amphithéâtre" }
   ];
 
   const currentSchedule = activeDay === 1 ? scheduleDay1 : scheduleDay2;
@@ -90,13 +101,13 @@ export default function Home({ onAdminLogin }) {
   const jury = [
     { 
       name: "Fatine Elharouni", 
-      title: "Docteure, Maîtresse Assistante en Gestion de Projet et en Gestion de la Chaîne d'Approvisionnement à l'École Nationale des Sciences Appliquées de Marrakech", 
+      title: "Enseignant chercheur à l'École Nationale des Sciences Appliquées de Marrakech", 
       photo: "/Jury/Jury1.jpeg",
       linkedin: "https://www.linkedin.com/in/fatine-elharouni-5a727821/"
     },
     { 
       name: "Abdellah Tajer", 
-      title: "Professeur assistant à l'École nationale des Sciences Appliquées de Marrakech", 
+      title: "Enseignant chercheur à l'École Nationale des Sciences Appliquées de Marrakech", 
       photo: "Jury/Jury2.jpeg",
       linkedin: "https://www.linkedin.com/in/abdellah-tajer-744047155/"
     },
@@ -248,7 +259,7 @@ export default function Home({ onAdminLogin }) {
           e.currentTarget.style.color = 'rgba(255,255,255,0.9)';
         }}
       >
-        Télécharger le Plan
+        Télécharger le Programme
       </a>
     </div>
   </motion.div>
@@ -407,7 +418,7 @@ export default function Home({ onAdminLogin }) {
             textAlign: 'justify'
           }}>
             <p style={{ marginBottom: '1.5rem' }}>
-             Dans le cadre de sa mission d’excellence et d’insertion professionnelle, <strong style={{ color: '#4494E4' }}>l’École Nationale des Sciences Appliquées de Marrakech (ENSA-M)</strong>, à travers ses Clubs étudiants, organise la <strong style={{ color: '#4494E4' }}>cinquième édition du Forum CareerExpo</strong>, les <strong style={{ color: '#4494E4' }}>15 et 16 novembre 2025</strong>, sur le campus de l’établissement.<br /><br />
+             Dans le cadre de sa mission d’excellence et d’insertion professionnelle, <strong style={{ color: '#4494E4' }}>l’École Nationale des Sciences Appliquées de Marrakech (ENSA-M)</strong>, à travers ses Clubs étudiants, organise la <strong style={{ color: '#4494E4' }}>cinquième édition du Forum CareerExpo</strong>, les <strong style={{ color: '#4494E4' }}>14 et 15 novembre 2025</strong>, sur le campus de l’établissement.<br /><br />
              Cet événement d’envergure régionale vise à rapprocher les étudiants ingénieurs de haut niveau des entreprises nationales et internationales, tout en mettant en lumière <strong style={{ color: '#4494E4' }}>les compétences techniques, l’innovation et le professionnalisme</strong> qui caractérisent les diplômés de l’ENSA-M. Plus de <strong style={{ color: '#4494E4' }}>500 étudiants</strong> et <strong style={{ color: '#4494E4' }}>30 entreprises leaders</strong> du Maroc et de l’international se réuniront pour connecter les talents de demain aux opportunités d’aujourd’hui.
             </p>
 
@@ -421,7 +432,7 @@ export default function Home({ onAdminLogin }) {
        </p>
 
        <p style={{ marginBottom: '0' }}>
-       Rejoignez-nous le <strong style={{ color: '#4494E4' }}>15 et 16 novembre 2025</strong> pour deux journées d’échanges, d’apprentissage et d’opportunités qui pourrait transformer votre avenir professionnel !
+       Rejoignez-nous le <strong style={{ color: '#4494E4' }}>14 et 15 novembre 2025</strong> pour deux journées d’échanges, d’apprentissage et d’opportunités qui pourrait transformer votre avenir professionnel !
       </p>
           </div>
         </motion.div>
@@ -899,7 +910,7 @@ export default function Home({ onAdminLogin }) {
             lineHeight: '1.6',
             textAlign: 'justify'
           }}>
-            Découvrer les moments forts qui ont marqué les éditions précédentes de Career Expo
+            Découvrir les moments forts qui ont marqué les éditions précédentes de Career Expo
         </p>
         <div style={{
           display: 'grid',
@@ -1316,7 +1327,7 @@ export default function Home({ onAdminLogin }) {
                       fontSize: '0.875rem',
                       fontWeight: '600'
                     }}>
-                      +212 5 24 44 81 37
+                      (+212) 06 70 09 93 87
                     </a>
                   </div>
                 </div>
@@ -1336,7 +1347,7 @@ export default function Home({ onAdminLogin }) {
                       fontSize: '0.875rem',
                       fontWeight: '600'
                     }}>
-                      ensa@uca.ma
+                      direction.ensam@uca.ac.ma
                     </a>
                   </div>
                 </div>
