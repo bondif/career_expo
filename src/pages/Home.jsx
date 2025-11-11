@@ -883,139 +883,6 @@ export default function Home({ onAdminLogin }) {
         </div>
       </section>
 
-      {/* ÉDITIONS PRÉCÉDENTES */}
-      <section id="éditions" style={{ padding: '4rem 1.5rem', background: 'rgba(255,255,255,0.03)' }}>
-        <h2 style={{
-          fontFamily: "'Playfair Display', serif",
-          fontSize: '2rem',
-          fontWeight: '700',
-          color: '#4494E4',
-          textAlign: 'center',
-          marginBottom: '1rem',
-          textShadow: 'none'
-        }}>
-          ÉDITIONS PRÉCÉDENTES
-        </h2>
-        <div style={{
-          width: '100px',
-          height: '2px',
-          background: 'linear-gradient(90deg, transparent, #4494E4, transparent)',
-          margin: '0 auto 1rem'
-        }}></div>
-        <p style={{
-          fontSize: '1rem',
-            color: 'rgba(255,255,255,0.7)',
-            maxWidth: '700px',
-            margin: '0 auto 1.5rem',
-            lineHeight: '1.6',
-            textAlign: 'justify'
-          }}>
-            Découvrir les moments forts qui ont marqué les éditions précédentes de Career Expo
-        </p>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '2.5rem',
-          maxWidth: '1000px',
-          margin: '0 auto'
-        }}>
-          {[
-            { year: '2022', image: '/editions/Edition2022Poster.png', route: '/edition-2022' },
-            { year: '2023', image: '/editions/Edition2023.png', route: '/edition-2023' },
-            { year: '2024', image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=500', route: '/edition-2024' }
-          ].map((edition, i) => (
-            <motion.div
-              key={edition.year}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
-              whileHover={{ scale: 1.05, y: -10 }}
-              className="card card-3d"
-              style={{
-                padding: '0',
-                overflow: 'hidden',
-                height: '320px',
-                position: 'relative',
-                cursor: 'pointer'
-              }}
-            >
-              <img
-                src={edition.image}
-                alt={`Édition ${edition.year}`}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  display: 'block',
-                  transition: 'transform 0.5s ease'
-                }}
-              />
-              <div style={{
-                position: 'absolute',
-                bottom: 0,
-                left: 0,
-                right: 0,
-                padding: '2rem',
-                background: 'linear-gradient(to top, rgba(10, 15, 28, 0.95), transparent)',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}>
-                <h3 style={{
-                  color: '#ffffff',
-                  fontSize: '2.5rem',
-                  fontWeight: '900',
-                  margin: 0,
-                  textShadow: '0 2px 10px rgba(249, 178, 51, 0.5)'
-                }}>
-                  {edition.year}
-                </h3>
-              </div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-                style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'rgba(0, 0, 0, 0.7)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}
-              >
-                <motion.a
-                  href={edition.route}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  style={{
-                    background: '#4494E4',
-                    color: '#0b0b0e',
-                    padding: '0.8rem 2rem',
-                    borderRadius: '25px',
-                    textDecoration: 'none',
-                    fontWeight: '700',
-                    fontSize: '1rem',
-                    letterSpacing: '0.5px',
-                    textTransform: 'uppercase',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.5rem'
-                  }}
-                >
-                  <span>Consulter</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </motion.a>
-              </motion.div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
       {/* PARTENAIRES */}
       <section id="partenaires" style={{ 
         padding: '4rem 1.5rem', 
@@ -1361,13 +1228,13 @@ export default function Home({ onAdminLogin }) {
                     </svg>
                   <div>
                     <p style={{ color: 'var(--text)', fontWeight: '600', margin: '0 0 0.3rem 0', fontSize: '0.875rem' }}>Site Web</p>
-                    <a href="http://www.ensa.ac.ma" target="_blank" rel="noopener noreferrer" style={{ 
+                    <a href="https://ensa-marrakech.uca.ma/" target="_blank" rel="noopener noreferrer" style={{ 
                       color: '#4494E4', 
                       textDecoration: 'none',
                       fontSize: '0.875rem',
                       fontWeight: '600'
                     }}>
-                      www.ensa.ac.ma
+                      www.ensa-marrakech.uca.ma
                     </a>
                   </div>
                 </div>

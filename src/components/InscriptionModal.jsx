@@ -80,7 +80,7 @@ const handleSubmit = async (e) => {
           Postuler 
         </h2>
         <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', textAlign: 'center', color: 'orange' }}>
-          On va vous contacter via gmail pour recevoir la vedio
+          On va vous contacter via gmail pour recevoir la vidéo
         </p>
         <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '1.2rem' }}>
           {error && <div style={{ color: '#f87171', fontSize: '0.9rem', textAlign: 'center' }}>{error}</div>}
@@ -111,9 +111,9 @@ const handleSubmit = async (e) => {
                       <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--violet)', fontWeight: '600', fontSize: '0.95rem' }}> Niveau d'études </label> 
                       <select name="niveau" required style={{...inputStyle, color: 'var(--text)'}}> 
                         <option value="" style={{background: 'var(--depth-1)', color: 'var(--text)'}}>Sélectionnez votre niveau</option> 
-                      <option value="Licence 1" style={{background: 'var(--depth-1)', color: 'var(--text)'}}>Licence 1</option> 
-                      <option value="Licence 2" style={{background: 'var(--depth-1)', color: 'var(--text)'}}>Licence 2</option> 
-                      <option value="Licence 3" style={{background: 'var(--depth-1)', color: 'var(--text)'}}>Licence 3</option> 
+                      <option value="BAC +1" style={{background: 'var(--depth-1)', color: 'var(--text)'}}>Licence 1</option> 
+                      <option value="BAC +2" style={{background: 'var(--depth-1)', color: 'var(--text)'}}>Licence 2</option> 
+                      <option value="BAC +3" style={{background: 'var(--depth-1)', color: 'var(--text)'}}>Licence 3</option> 
                       <option value="BAC +4" style={{background: 'var(--depth-1)', color: 'var(--text)'}}>BAC + 4</option> 
                       <option value="BAC +5" style={{background: 'var(--depth-1)', color: 'var(--text)'}}>BAC + 5</option>
                        </select> 

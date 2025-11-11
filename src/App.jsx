@@ -54,9 +54,8 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home onAdminLogin={handleAdminLogin} />} />
             <Route path="/dashboard" element={<Dashboard onLogout={handleAdminLogout} />} />
-            <Route path="/edition-2022" element={<Edition2022 />} />
-            <Route path="/edition-2023" element={<Edition2023 />} />
-            <Route path="/edition-2024" element={<Edition2024 />} />
+
+            <Route path="/edition-2024"/>
           </Routes>
           <Footer />
           <ScrollToTop />

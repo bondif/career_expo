@@ -13,7 +13,7 @@ export default function Navbar({ dark, setDark }) {
       setScrolled(window.scrollY > 50);
 
       // Détecte la section active
-      const sections = ['accueil', 'à-propos', 'programme', 'conférenciers', 'jury-cv', 'éditions', 'admin', 'partenaires', 'contact'];
+      const sections = ['accueil', 'à-propos', 'programme', 'conférenciers', 'jury-cv', 'admin', 'partenaires', 'contact'];
       const scrollPos = window.scrollY + 150;
 
       for (const section of sections) {
@@ -39,7 +39,7 @@ export default function Navbar({ dark, setDark }) {
     { label: 'Programme', id: 'programme' },
     { label: 'Conférenciers', id: 'conférenciers' },
     { label: 'Jury CV', id: 'jury-cv' },
-    { label: 'Éditions', id: 'éditions' },
+    { label: 'Édition 2024', id: 'éditions' },
     { label: 'Partenaires', id: 'partenaires' },
     { label: 'Contact', id: 'contact' },
   ];
@@ -86,7 +86,7 @@ export default function Navbar({ dark, setDark }) {
             return (
               <a
                 key={item.id}
-                href={`/#${item.id}`}
+                href={item.id !== "éditions" ? `/#${item.id}` : "/edition2024"}
                 className="nav-link nav-link-3d luxury-focus"
                 style={{
                   color: isActive ? '#4494E4' : 'var(--text)',
@@ -96,6 +96,12 @@ export default function Navbar({ dark, setDark }) {
                   transition: 'all 0.3s ease'
                 }}
                 onClick={(e) => {
+                  if (item.id === 'éditions') {
+                    // Laisse le lien agir normalement → pas de preventDefault ici
+                    return;
+                  }
+
+                  // Pour tous les autres liens
                   e.preventDefault();
                   if (window.location.pathname !== '/') {
                     window.location.href = `/#${item.id}`;
@@ -109,37 +115,6 @@ export default function Navbar({ dark, setDark }) {
                 }}
               >
                 {item.label}
-
-                {/* Ligne dorée animée */}
-                <span
-                  style={{
-                    position: 'absolute',
-                    bottom: '-8px',
-                    left: 0,
-                    width: isActive ? '100%' : '0',
-                    height: '3px',
-                    background: '#4494E4',
-                    borderRadius: '2px',
-                    transition: 'width 0.4s ease',
-                    boxShadow: isActive ? '0 0 15px var(--glow)' : 'none'
-                  }}
-                ></span>
-
-                {/* Hover : ligne grandit */}
-                <span
-                  style={{
-                    position: 'absolute',
-                    bottom: '-8px',
-                    left: 0,
-                    width: 0,
-                    height: '3px',
-                    background: '#4494E4',
-                    borderRadius: '2px',
-                    transition: 'width 0.4s ease',
-                  }}
-                  onMouseEnter={e => e.target.style.width = '100%'}
-                  onMouseLeave={e => e.target.style.width = isActive ? '100%' : '0'}
-                ></span>
               </a>
             );
           })}
