@@ -80,7 +80,7 @@ const handleSubmit = async (e) => {
           Postuler 
         </h2>
         <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', textAlign: 'center', color: 'orange' }}>
-          On va vous contacter via gmail pour recevoir la vidéo
+         Veuillez remplir le formulaire , puis envoyer votre vidéo à l’adresse suivante : club.emje.2025@gmail.com
         </p>
         <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '1.2rem' }}>
           {error && <div style={{ color: '#f87171', fontSize: '0.9rem', textAlign: 'center' }}>{error}</div>}
